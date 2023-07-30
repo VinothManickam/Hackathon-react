@@ -13,7 +13,7 @@ const TodoApp = () => {
 
   const fetchTodos = async () => {
     try {
-      const response = await axios.get('http://127.0.0.1:5000/api/todos');
+      const response = await axios.get('https://hackathon-flask.onrender.com/api/todos');
       setTodos(response.data);
     } catch (error) {
       console.error('Error fetching todos:', error);
@@ -28,7 +28,7 @@ const TodoApp = () => {
         completed: false,
       };
       const response = await axios.post(
-        'http://127.0.0.1:5000/api/todos',
+        'https://hackathon-flask.onrender.com/api/todos',
         newTodo
       );
       setTodos([...todos, response.data]);
@@ -46,7 +46,7 @@ const TodoApp = () => {
         description: description,
         completed: false, // Update this value accordingly
       };
-      await axios.put(`http://127.0.0.1:5000/api/todos/${todoId}`, updatedTodo);
+      await axios.put(`https://hackathon-flask.onrender.com/api/todos/${todoId}`, updatedTodo);
       // Update the state with the updated todo data
       setTodos(
         todos.map((todo) =>
@@ -60,7 +60,7 @@ const TodoApp = () => {
 
   const deleteTodo = async (todoId) => {
     try {
-      await axios.delete(`http://127.0.0.1:5000/api/todos/${todoId}`);
+      await axios.delete(`https://hackathon-flask.onrender.com/api/todos/${todoId}`);
       setTodos(todos.filter((todo) => todo._id !== todoId));
     } catch (error) {
       console.error('Error deleting todo:', error);
