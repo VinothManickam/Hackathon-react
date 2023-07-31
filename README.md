@@ -11,8 +11,7 @@ This is a react ui Create,Update,Delete for Todo app
 1. Clone the repository:
    
 ```bash
-https://github.com/VinothManickam/Hackathon-Flask.git
-
+https://github.com/VinothManickam/Hackathon-react.git
 ```
 
 ## Usage
